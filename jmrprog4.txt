@@ -1,0 +1,56 @@
+// Jean-Michel Rusangiza, CSC 144-B, Oct 6, 2016
+// Code for while loops with factorials and sum of even numbers and odd numbers
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int counter = 1; // initializes counter to 1
+    int number = 0; // initializes number to 0
+    unsigned int long factorial = 1; // initializes factorial to 1
+
+
+    cout << "Enter Number to calculate the factorial of: "; // prompt user for data
+    cin >> number; // input the number to calculate the factorial of
+
+    // loop that calculates the factorial of a number
+    while (counter <= number) // loops until counter is equal to the number
+    {
+        factorial = factorial *counter; // multiply factorial by counter and set that to factorial
+        counter = counter + 1; // add 1 to counter and set that to counter
+    }
+    cout << "The factorial of " << number << "! is: " << factorial << endl; // display the factorial of number
+
+     int newCount = 0; // declare the newCount (intialized to 0)
+     int minNum = 0; // declare min number (initialized to 0)
+     int maxNum = 0; // declare max number (initialized to 0)
+     unsigned int long evenSum = 0; // declare the variable of the sum of all the even numbers
+     unsigned int long oddSum = 0; // declare the variable of the sum of all the odd numbers
+
+     cout << "Enter a Min Number:"; // Prompt the user for data
+     cin >> minNum; // input the min number
+
+     newCount = minNum; // set newCount equal to minNum
+
+     cout << "Enter a Max Number: "; // prompt user for data
+     cin >> maxNum; // input max number
+
+     while ( newCount <= maxNum ) // loops until the new count equals to max number
+     {
+         if ( newCount % 2 == 0) // statement for new count to be even
+         {
+             evenSum = evenSum + newCount; // declares the sum of the even equal to sum and the new count
+             newCount = newCount + 1; // the new count increases by 1
+         }
+        else // if new count is not even
+            {
+            oddSum = oddSum + newCount; // declares the sum of the odd sum and new count
+            newCount = newCount + 1; // the new count increase by 1
+            }
+     }
+
+     cout << "The sum of the evens are: " << evenSum << endl; // display the sum of evens
+     cout << "The sum of the odds are: " << oddSum << endl; // sisplay the sum of odds
+
+}

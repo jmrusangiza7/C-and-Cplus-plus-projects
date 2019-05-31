@@ -1,0 +1,18 @@
+Assignment and Increment operators
+
+Assignment operators
+
+int x = 10 (Sets x equal to 10)
+
+x += 10 (Says x + 10, or 10 plus 10)
+x-=10 (Says x - 10, or 10 minus 10)
+x *= 10 (Says x * 10 or 10 times 10)
+x /= 10 (Says x / 10 or x divided by 10)
+x %= 3 (Takes 10 and divides by 3 and only output the remainder which is 1)
+
+Increment operators
+
+x++ (Says x + 1 or 10 plus 1)
+++x (Says 1 + x or 1 plus 10)
+x-- (Says x - 1 or 10 - 1)
+--x (Says 1 - x or 1 - 10)

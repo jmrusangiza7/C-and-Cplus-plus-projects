@@ -1,0 +1,23 @@
+// Jean-Michel Rusangiza, CSC 144-B, Dec. 7, 2016
+// Final project involving creating class Complex and using complex numbers
+#include <iostream>
+
+using namespace std;
+
+class jmrComplex {
+private:
+    double realPart;
+    double imaginaryPart;
+
+public:
+
+    jmrComplex(double r = 0.0, double i = 0.0);
+
+    jmrComplex& add(jmrComplex&y);
+    jmrComplex& subtract(jmrComplex&y);
+    void print();
+
+
+
+
+};

@@ -1,0 +1,55 @@
+// Jean-Michel Rusangiza, CSC 144-B,
+// Printing out a list of triangles with asterisks
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   for (int counter = 1; counter <= 10; ++counter)
+    {
+        for (int counter2 = 1; counter2 <= counter; ++counter2)
+        cout << "*";
+    cout << endl;
+    }
+
+    cout << endl;
+
+    for (int counter = 1; counter <= 10; ++counter)
+    {
+        for (int counter2 = 10; counter2 >= counter; --counter2)
+        cout << "*";
+    cout << endl;
+    }
+
+    for (int counter = 1; counter <= 10; ++counter)
+    {
+        for (int counter2 = 10; counter2 <= counter; ++counter2)
+
+    cout << endl;
+    }
+
+   cout << endl;
+    for ( int counter = 1; counter <= 10; ++counter)
+    {
+        for (int counter2 = 0; counter2 < counter-1; ++counter2)
+            cout << " ";
+
+        for (int counter3 = 10; counter3 >= counter; --counter3)
+            cout << "*";
+        cout << endl;
+    }
+
+    cout << endl;
+
+    for (int counter = 1; counter <= 10; ++counter)
+    {
+        for (int counter2 = 9; counter2 >= counter; --counter2)
+            cout << " ";
+
+        for ( int counter3 = 1; counter3 <= counter; ++counter3)
+            cout << "*";
+        cout << endl;
+    }
+
+
+}

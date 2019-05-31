@@ -1,0 +1,39 @@
+// Jean-Michel Rusangiza, CSC 144-B, Nov. 11, 2016
+// Creating two functions and working with pass by value and pass by reference
+#include <iostream>
+using namespace std;
+
+int tripleByValue( int ); // function prototype (value)
+void tripleByReference ( int & ); // function prototype (reference)
+
+int main()
+{
+    int x = 7; // value to triple using tripleByValue
+    int y = 21; // value to triple using tripleByValue
+
+    // demonstrate tripleByValue
+    cout << "x = " << x << " before tripleByValue\n";
+    cout << "Values returned by tripleByValue: ";
+    cout << tripleByValue( x ) << endl;
+    cout << "x = " << x << " after tripleByValue\n" << endl;
+
+    // demonstrate tripleByReference
+    cout << "y = " << y << " before tripleByReference" << endl;
+       tripleByReference( y );
+    cout << "y = " << y << " after tripleByReference" << endl;
+
+} // end main
+
+// tripleByValue multiplies x by itself, stores the result and returns new value
+int tripleByValue( int x )
+{
+    return x *= 3; // x multiplied by 3
+
+} // end function tripleByValue
+
+// tripleByValue multiplies y by itself and stores the result and returns new value
+void tripleByReference( int &y )
+{
+     y *= 3; // y multiplied by 3
+
+} // end function tripleByReference

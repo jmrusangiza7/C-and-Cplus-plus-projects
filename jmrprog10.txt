@@ -1,0 +1,25 @@
+// Jean-Michel Rusangiza, CSC 144-B, Dec. 2. 2016
+// Create a printArray with beginning and ending subscript
+#include <iostream>
+#include <array>
+#include <iomanip>
+using namespace std;
+
+
+void printArray(array< int, 8> p, int s, int e)
+{
+    if (s==e)
+        cout << p[e];
+    else{
+        cout << p[s] << " ";
+        printArray(p, s+1, e);
+
+    }
+
+}
+
+int main()
+{
+    array < int, 8 > p2 ={23,25,67,56,87,21,98,35};
+    printArray (p2, 4, 7);
+}

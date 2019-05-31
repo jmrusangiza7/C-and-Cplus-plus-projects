@@ -1,0 +1,61 @@
+// Jean-Michel Rusangiza, CSC 144-B, Dec. 7, 2016
+// Final project involving creating class Complex and using complex numbers
+#include <iostream>
+
+using namespace std;
+
+class Complex {
+private:
+    double realPart;
+    double imaginaryPart;
+
+public:
+
+    Complex(double r = 0.0, double i = 0.0){
+        realPart = r;
+        imaginaryPart = i;
+}
+
+    void print(){
+        cout << realPart << "+" << imaginaryPart << "i";
+    }
+ Complex& add(Complex&y){
+    double temprealPart = realPart + y.realPart;
+    double tempimaginaryPart = imaginaryPart + y.imaginaryPart;
+
+    Complex tempComplex( temprealPart, tempimaginaryPart);
+    return tempComplex;
+ }
+
+ Complex& subtract(Complex&y){
+    double temprealPart = realPart - y.realPart;
+    double tempimaginaryPart = imaginaryPart - y.imaginaryPart;
+
+    Complex tempComplex( temprealPart, tempimaginaryPart);
+    return tempComplex;
+ }
+
+};
+
+int main()
+{
+    Complex x(1, 2), y(3, 4), z; // choosing yo
+    z = x.add(y);
+
+x.print();
+    cout << "  added to ";
+    y.print();
+    cout << " equals ";
+    z.print();
+
+    cout << "\n";
+
+    z = x.subtract(y);
+    x.print();
+    cout << " subtract to ";
+    y.print();
+    cout << " equals to ";
+    z.print();
+
+
+}

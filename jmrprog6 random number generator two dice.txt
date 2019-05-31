@@ -1,0 +1,83 @@
+// Jean-Michel Rusangiza, CSC 144-B, Oct. 19, 2016
+// Rolling two six-sided dice 100,000 times
+#include <iostream>
+#include <iomanip>
+#include <cstdlib> // contain function prototype for rand
+using namespace std;
+
+int main()
+{
+    unsigned int frequency2 = 0; // count of 2s rolled
+    unsigned int frequency3 = 0; // count of 3s rolled
+    unsigned int frequency4 = 0; // count of 4s rolled
+    unsigned int frequency5 = 0; // count of 5s rolled
+    unsigned int frequency6 = 0; // count of 6s rolled
+    unsigned int frequency7 = 0; // count of 7s rolled
+    unsigned int frequency8 = 0; // count of 8s rolled
+    unsigned int frequency9 = 0; // count of 9s rolled
+    unsigned int frequency10 = 0; // count of 10s rolled
+    unsigned int frequency11 = 0; // count of 11s rolled
+    unsigned int frequency12 = 0; // count of 12s rolled
+
+    // summarize the results of 100,00 rolls of a die
+    for ( unsigned int rollDice = 1; rollDice <= 100000; ++rollDice )
+    {
+        unsigned int face = (rand() % 6) + 1; // random number from 1 to 6
+
+        unsigned int face2 = (rand() % 6) + 1; // random number from 1 to 6
+
+        int sum = face + face2; // sum of the two rolled dice
+
+        // determine roll value 2-12 and increment appropriate counter
+        switch( sum )
+        {
+        case 2:
+            ++frequency2; // increment the 2s counter
+            break;
+        case 3:
+            ++frequency3; // increment the 3s counter
+            break;
+        case 4:
+            ++frequency4; // increment the 4s counter
+            break;
+        case 5:
+            ++frequency5; // increment the 5s counter
+            break;
+        case 6:
+            ++frequency6; // increment the 6s counter
+            break;
+        case 7:
+            ++frequency7; // increment the 7s counter
+            break;
+        case 8:
+            ++frequency8; // increment the 8s counter
+            break;
+        case 9:
+            ++frequency9; // increment the 9s counter
+            break;
+        case 10:
+            ++frequency10; // increment the 10s counter
+            break;
+        case 11:
+            ++frequency11; // increment the 11s counter
+            break;
+        case 12:
+            ++frequency12; // increment the 12s counter
+            break;
+        default: // invalid value
+            cout << "Program should not be there!";
+        } // end switch
+    } // end for
+cout << "Face" << setw( 13 ) << "Frequency" << endl; // output headers
+cout << "   2" << setw( 13 ) << frequency2
+    << "\n  3" << setw( 13 ) << frequency3
+    << "\n  4" << setw( 13 ) << frequency4
+    << "\n  5" << setw( 13 ) << frequency5
+    << "\n  6" << setw( 13 ) << frequency6
+    << "\n  7" << setw( 13 ) << frequency7
+    << "\n  8" << setw( 13 ) << frequency8
+    << "\n  9" << setw( 13 ) << frequency9
+    << "\n  10" << setw( 13 ) << frequency10
+    << "\n  11" << setw( 13 ) << frequency11
+    << "\n  12" << setw( 13 ) << frequency12 << endl;
+} // end main

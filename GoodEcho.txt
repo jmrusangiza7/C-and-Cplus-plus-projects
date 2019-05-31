@@ -1,0 +1,44 @@
+#include<stdio.h>
+#define BUF_SIZE 10000
+
+void good_echo(void)
+{
+    char buf[BUF_SIZE];
+    while(1) {
+        char* p = fgets(buf, BUF_SIZE, stdin);
+        if (p == NULL) {
+            p = (char*)realloc(p, 11*sizeof(char));
+        }
+        printf("%s", p);
+    }
+    return;
+}
+
+int main(void)
+{
+    good_echo();
+    return 0;
+}
+
+/* Pseudocode
+
+define BUF_SIZE
+
+declare function good_echo
+
+create variable buf of char data type with array of BUF_SIZE
+while loop true
+create pointer p that points to of data type char and set that to
+fgets with buf, BUF_SIZE, stdin
+
+if p is null
+reallocate memory
+
+print string
+
+
+
+
+main function
+call function good_echo
+*/

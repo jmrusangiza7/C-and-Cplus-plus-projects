@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+int main(){
+
+int m, n, A[6][5], B[6][5], C[6][5];
+
+printf("Enter elements of 1st matrix\n");
+
+for (m=0; m<6; m++)
+{
+    for (n=0; n<5; n++)
+    {
+        scanf("%d", &A[m][n]);
+    }
+}
+    printf("Enter elements for 2nd matrix\n");
+    for(m=0; m<6; m++)
+    {
+        for(n=0; n<5; n++)
+        {
+            scanf("%d", &B[m][n]);
+        }
+    }
+    printf("Enter the elements for 3rd matrix\n");
+
+    for(m=0; m<6; m++)
+    {
+        for (n=0; n<5; n++)
+        {
+            scanf("%d", &C[m][n]);
+        }
+    }
+    printf("The sum of all matrices\n");
+
+    for(m=0; m<6; m++)
+    {
+        for(n=0; n<5; n++)
+        {
+            printf("%d\t",(A[m][n] + B[m][n] + C[m][n]));
+
+        }
+        printf("\n");
+    }
+}

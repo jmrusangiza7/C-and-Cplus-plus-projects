@@ -1,0 +1,14 @@
+For Loops 
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    for(int x = 5; x <= 25; x+=5) // has the intialization (starting point), 
+Loop continuation condition (ending point), increment (how much you are going up)
+        
+
+cout << x << endl;
+
+}

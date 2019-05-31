@@ -1,0 +1,23 @@
+Switch variable
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int age = 21;
+
+    switch(age){
+    case 16:
+        cout << "Hey you can drive now!" << endl;
+        break; // break means end the switch, also saves the computer of having to run the other cases
+    case 18:
+        cout << "go vote!" << endl;
+        break;
+    case 21:
+        cout << "buy me some beer" << endl;
+        break;
+    default:
+        cout << "Sorry you get nothing" << endl;
+    } // you don't need to have a break because it's already at the end of the switch  

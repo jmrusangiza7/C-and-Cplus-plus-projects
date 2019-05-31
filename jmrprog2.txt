@@ -1,0 +1,43 @@
+//Jean-Michel Rusangiza, CSC 144-B, Sept. 16, 2016
+//Comparing integers using if statements, rational operators
+//and equality  operators
+using std::cin;  // program uses cin
+using std::endl; // program uses endl
+
+#include <iostream> // allows program to perform input and output
+
+using std::cout;  // program uses cout
+//function main begins program execution
+int main()
+{
+    int number1 = 0; // first integer to compare (initialized to 0)
+    int number2 = 0; // second integer to compare (initialized to 0)
+    int number3 = 0; // third integer to compare (initialized to 0)
+
+    cout << "Enter three integers to compare: "; // prompt user for data
+    cin >> number1 >> number2 >> number3; // read three integers from user
+
+    int large = number1;
+    int small = number1;
+
+    if ( number2 > number1 ) // compare number2 to number1 to see which is larger
+        if ( number2 > number3 ) // compare number2 to number3 to see which is larger
+        large = number2;
+
+    if ( number3 > number1 ) // compare number3 to number1 to see which is larger
+       if ( number3 > number2 ) // compare number3 to number2 to see which is larger
+       large = number3;
+
+  cout << "largest: " << large << endl; // display "largest: " and largest integer
+
+  if ( number2 < number1 ) // compare number2 to number1 to see which is smaller
+      if ( number2 < number3 ) // compare number2 to number3 to see which is smaller
+      small = number2;
+
+  if ( number3 < number1 ) // compare number3 to number1 to see which is smaller
+     if (number3 < number2 ) // compare number3 to number2 to see which is smaller
+     small = number3;
+
+ cout << "smallest: " << small << endl; // display "smallest: " and smallest integer
+
+} // end function main

@@ -1,0 +1,83 @@
+Employee.h
+
+//Jean-Michel Rusangiza, CSC 144-B, Sept. 29, 2016
+// Code of  class, objects, and data members
+#include <iostream>
+#include <string>
+using namespace std;
+
+class JMREmployee{
+    public:
+        // constructor initializes
+        explicit JMREmployee(string first, string last, double MonthlyPayroll)
+        :FirstName(first), LastName (last)
+        {
+            setMonthlyPayroll(MonthlyPayroll);
+           }; // end JMREmployee constructor
+
+
+        void setFirstName(string name){
+
+            FirstName = name; // function sets the  First Name
+
+        } // end function setFirstName
+
+        string getFirstName() const // function to get the First Name
+        {
+            return FirstName; // return object's FirstName
+        } // end function getFirstName
+
+    void setLastName (string name) // function to set the Last Name
+    {
+        LastName = name; // store the Last Name in the object
+    }// end function setLastName
+
+    string getLastName() const // function to get the Last Name
+    {
+        return LastName; // return object's LastName
+    } // end function getLastName
+
+    void setMonthlyPayroll ( double rate ) // function to set the Monthly Payroll
+    {
+        if (MonthlyPayroll >= 0) {
+                MonthlyPayroll = rate;
+                }
+            // set if and else conditions for the Employee Monthly Payroll
+
+        if (MonthlyPayroll <= 0) {
+            cout << "Error"; }
+                }// end function setMonthlyPayroll
+
+    double getMonthlyPayroll() const{
+        return MonthlyPayroll; // function to get the Monthly Payroll
+    } // end function Monthly Payroll
+
+private:
+    string FirstName; // First Name for Employee
+    string LastName; // Last Name for Employee
+    double MonthlyPayroll; // Monthly Payroll for Employee
+};
+
+
+Main Function
+
+#include <iostream>
+#include <string>
+#include "employee.h"
+using namespace std;
+
+
+int main ()
+{
+    JMREmployee Employee1 ( "Henry", "Williams", 1000 );
+    JMREmployee Employee2 ( "Jane", "Turner", 3000 );
+
+    cout << "First Name: " << Employee1.getFirstName() << "Last Name: " << Employee1.getLastName() << endl;
+    cout << "Salary: " << Employee1.getMonthlyPayroll() << endl;
+
+    cout << "First Name: " << Employee2.getFirstName() << "Last Name: " << Employee2.getLastName() << endl;
+    cout << "Salary: "  << Employee2.getMonthlyPayroll() << endl;
+
+}
+
+

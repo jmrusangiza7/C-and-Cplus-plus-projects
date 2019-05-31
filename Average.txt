@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+
+double average (int n, int a[])
+{
+    int sum = 0;
+    int i;
+
+    for (i=0; i<n; i++){
+        sum += a[i];
+    }
+    return (double) sum/n;
+}

@@ -1,0 +1,28 @@
+/* Jean-Michel Rusangiza */
+#include<stdio.h>
+#define rows 3
+#define cols 3
+int main(){
+
+    int Table[rows][cols], i, j;
+
+     for(i=0; i<rows; i++)
+     {
+         for (j=0; j<cols; j++)
+        {
+         printf("Enter Table[%d]: ", i,j);
+         scanf("%d", &Table[i][j]);
+        }
+     }
+     printf("\n In Table form: \n\n");
+
+     for(i=0; i<rows; i++)
+     {
+         for(j=0; j<cols; j++)
+         {
+             printf("%3d ", Table[i][j]);
+         }
+         printf("\n");
+     }
+        return 0;
+}

@@ -1,0 +1,29 @@
+// Jean-Michel Rusangiza, CSC 144-B, Dec. 7, 2016
+// Final project involving creating class Complex and using complex numbers
+#include <iostream>
+#include "jmrcomplex.h"
+using namespace std;
+
+jmrComplex::jmrComplex(double r , double i ){
+        realPart = r;
+        imaginaryPart = i;
+}
+jmrComplex& jmrComplex::add(jmrComplex&y){
+    double temprealPart = realPart + y.realPart;
+    double tempimaginaryPart = imaginaryPart + y.imaginaryPart;
+
+    jmrComplex tempComplex( temprealPart, tempimaginaryPart);
+    return tempComplex;
+ }
+
+ jmrComplex& jmrComplex::subtract(jmrComplex&y){
+    double temprealPart = realPart - y.realPart;
+    double tempimaginaryPart = imaginaryPart - y.imaginaryPart;
+
+    jmrComplex tempComplex( temprealPart, tempimaginaryPart);
+    return tempComplex;
+ }
+ void jmrComplex::print(){
+        cout << realPart << "+" << imaginaryPart << "i";
+    }
+
